@@ -15,7 +15,7 @@ def test_registration_form_demoqa():
     browser.element('.react-datepicker__year-select').click().element('[value="1986"]').click()
     browser.element('.react-datepicker__day--008').click()
     browser.element('[for="hobbies-checkbox-1"]').click()
-    browser.element('#uploadPicture').send_keys(os.path.abspath('../S_k.jpg'))
+    browser.element('#uploadPicture').send_keys(os.path.abspath('../api8.png'))
     browser.element('#currentAddress').type('India').press_enter()
     browser.element("#react-select-3-input").type("Rajasthan").press_enter()
     browser.element("#react-select-4-input").type("Jaiselmer").press_enter()
@@ -23,4 +23,4 @@ def test_registration_form_demoqa():
     browser.element("#example-modal-sizes-title-lg").should(have.text('Thanks for submitting the form'))
     browser.element('.table').all('td').even.should(
         have.exact_texts('Coluchy Aleksandr', 'AC@ya.com', 'Male', '4455667788', '08 July,1986', 'Computer Science',
-                         'Sports', 'S_k.jpg', 'India', 'Rajasthan Jaiselmer'))
+                         'Sports', 'api8.png', 'India', 'Rajasthan Jaiselmer'))
