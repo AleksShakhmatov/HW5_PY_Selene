@@ -4,6 +4,7 @@ import os
 
 def test_registration_form_demoqa():
     browser.open('/automation-practice-form')
+
     browser.element('#firstName').type('Coluchy')
     browser.element('#lastName').type('Aleksandr')
     browser.element('#userEmail').type('AC@ya.com')
@@ -21,6 +22,7 @@ def test_registration_form_demoqa():
     browser.element("#react-select-4-input").type("Jaiselmer").press_enter()
     browser.element('#submit').press_enter()
     browser.element("#example-modal-sizes-title-lg").should(have.text('Thanks for submitting the form'))
+
     browser.element('.table').all('td').even.should(
         have.exact_texts('Coluchy Aleksandr', 'AC@ya.com', 'Male', '4455667788', '08 July,1986', 'Computer Science',
                          'Sports', '8.png', 'India', 'Rajasthan Jaiselmer'))
